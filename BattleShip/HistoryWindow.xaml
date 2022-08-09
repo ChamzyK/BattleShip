@@ -1,0 +1,18 @@
+﻿<Window x:Class="BattleShip.HistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BattleShip"
+        mc:Ignorable="d"
+        Title="История" Height="375" Width="425" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <ListBox Name="PlayerListBox" HorizontalAlignment="Left" Height="270" Margin="10,41,0,0" VerticalAlignment="Top" Width="164"/>
+        <ListBox Name="CompListBox" HorizontalAlignment="Left" Height="270" Margin="232,41,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label Content="Игрок" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="169"/>
+        <Label Content="Компьютер" HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" Width="165"/>
+        <Label Content="Конец" HorizontalAlignment="Left" Margin="174,41,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label Content="Начало" HorizontalAlignment="Left" Margin="174,285,0,0" VerticalAlignment="Top" Width="58"/>
+
+    </Grid>
+</Window>

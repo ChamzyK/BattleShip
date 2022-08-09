@@ -1,0 +1,70 @@
+﻿<Window x:Class="BattleShip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BattleShip"
+        mc:Ignorable="d"
+        Title="Морской бой" Height="500" Width="650"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="475" MinWidth="625"
+        KeyDown="Window_KeyDown">
+    <Grid Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.ColumnSpan="2">
+            <MenuItem Name="NewGameMenuItem" Header="Новая игра(A)" Click="NewGameMenuItem_Click"/>
+            <MenuItem Name="SaveMenuItem" Header="Сохранить(B)" Click="SaveMenuItem_Click"/>
+            <MenuItem Name="LoadMenuItem" Header="Загрузить(C)" Click="LoadMenuItem_Click"/>
+            <MenuItem Name="HistoryMenuItem" Header="История(D)" Click="HistoryMenuItem_Click"/>
+            <MenuItem Name="InfoMenuItem" Header="Правила(E)" Click="InfoMenuItem_Click"/>
+            <MenuItem Name="AboutMenuItem" Header="О разработчике(F)" Click="AboutMenuItem_Click"/>
+            <MenuItem Name="ExitMenuItem" Header="Выход(G)" Click="ExitMenuItem_Click"/>
+        </Menu>
+
+        <TextBlock Text="Игрок" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe Print" FontSize="24"/>
+
+        <TextBlock Text="Компьютер" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe Print" FontSize="24"/>
+
+        <Grid x:Name="LeftFieldGrid" Grid.Row="2" Margin="5"/>
+
+        <Grid x:Name="RightFieldGrid" Grid.Row="2" MouseLeftButtonDown="RightFieldGrid_MouseLeftButtonDown" Grid.Column="1" Margin="5" MouseEnter="RightFieldGrid_MouseEnter" MouseLeave="RightFieldGrid_MouseLeave"/>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Ваши корабли:" TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="Green"/>
+            <Rectangle Margin="5" Fill="Green" Grid.Column="1"/>
+
+            <TextBlock Text="Корабли под обстрелом:" Grid.Column="2"  TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="Orange"/>
+            <Rectangle Margin="5" Fill="Orange" Grid.Column="3"/>
+
+            <TextBlock Text="Потопленные:" Grid.Column="4"  TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="Red"/>
+            <Rectangle Margin="5" Fill="Red" Grid.Column="5"/>
+
+            <TextBlock Text="Попадания мимо:" Grid.Column="6"  TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="CadetBlue"/>
+            <Rectangle Margin="5" Fill="CadetBlue" Grid.Column="7"/>
+        </Grid>
+
+        <TextBlock Text="Начните новую игру или восстановите предыдущую" TextAlignment="Center" Grid.ColumnSpan="2" Grid.Row="4" Name="InfoTextBlock" FontFamily="Segoe Print" FontSize="20"/>
+
+    </Grid>
+</Window>
