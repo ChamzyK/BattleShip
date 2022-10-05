@@ -29,6 +29,6 @@ Player can set each ship on the fieldbut also ships could be set randomly.
 
 ![Alt text](Images/BattleShip_Arrangement.png "Arrangement")
 
-### Game example
+### Gaming example
 
 ![Alt text](Images/BattleShip_BoardInGaming.png "Game example")
